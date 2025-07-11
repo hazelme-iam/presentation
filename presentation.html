@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink & Blue Presentation</title>
+    <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+    <div class="side-menu menu-collapsed">
+      <button class="menu-toggle">☰</button>
+      <div class="menu-content">
+        <div class="menu-header">
+          <h3>Navigation</h3> 
+          <button class="menu-collapse">−</button>
+        </div>
+        <ul class="slide-list">
+          <li class="slide-item active" data-slide="0">Title Slide</li>
+          <li class="slide-item" data-slide="1">Overview of Topics</li>
+          <li class="slide-item" data-slide="2">Waterfall Model</li>
+          <li class="slide-item" data-slide="3">Key Features</li>
+          <li class="slide-item" data-slide="4">Color Palette</li>
+          <li class="slide-item" data-slide="5">Statistics Visualization</li>
+          <li class="slide-item" data-slide="6">Thank You!</li>
+        </ul>
+      </div>
+    </div>
+    <div class="side-menu-overlay" style="display:none;"></div>
+    <div class="presentation">
+        <!-- Morphing SVG blob background -->
+        <svg class="morph-blob" viewBox="0 0 600 600" width="600" height="600" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:10%;left:50%;transform:translateX(-50%);z-index:0;pointer-events:none;">
+            <path id="morphPath" fill="url(#morphGradient)" d="M421.5,320Q410,390,340,420Q270,450,200,420Q130,390,120,320Q110,250,170,200Q230,150,300,170Q370,190,420,240Q470,290,421.5,320Z"></path>
+            <defs>
+                <linearGradient id="morphGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ff7eb9"/>
+                    <stop offset="100%" stop-color="#7eb9ff"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <!-- Background bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        
+        <!-- Title Slide -->
+        <div class="slide title-slide active">
+            <h1>Commissions and Sales Management System</h1>
+            <p class="content-box">Danica's Beauty Lounge</p>
+            <div class="footer">Created with HTML, CSS, and JavaScript</div>
+        </div>
+        
+        <!-- Overview of Topics Slide -->
+        <div class="slide">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
+                    <div id="progress-bar-2" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
+                        <div id="progress-fill-2" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
+                    </div>
+                    <span id="progress-percent-2" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
+                </div>
+            </div>
+            <h2>Overview of Topics</h2>
+            <div class="overview-topics-row" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: stretch; width: 100%; max-width: 900px; margin: 0 auto;">
+                <button class="topic-btn topic-box" data-topic="SDLC Waterfall Model" data-description="The Waterfall Model is a linear and sequential approach to software development, consisting of distinct phases where each phase must be completed before the next begins.">SDLC Model Used</button>
+                <button class="topic-btn topic-box" data-topic="Requirements and Gathering" data-description="This phase involves collecting and documenting the business needs and requirements from stakeholders to ensure a clear understanding of what the system must achieve.">Requirements and Gathering</button>
+                <button class="topic-btn topic-box" data-topic="System Design" data-description="In this phase, the system architecture and design specifications are created based on the gathered requirements, outlining how the system will be built.">System Design</button>
+                <button class="topic-btn topic-box" data-topic="Implementation" data-description="The actual development and coding of the system take place in this phase, following the design specifications.">Implementation</button>
+                <button class="topic-btn topic-box" data-topic="Testing" data-description="This phase involves verifying and validating the system to ensure it meets the specified requirements and is free of defects.">Testing</button>
+                <button class="topic-btn topic-box" data-topic="Deployment" data-description="The completed system is released to users and made operational in the production environment during this phase.">Deployment</button>
+                <button class="topic-btn topic-box" data-topic="Maintenance" data-description="Ongoing support, updates, and bug fixes are provided in this phase to ensure the system continues to function as intended.">Maintenance</button>
+            </div>
+        </div>
+        
+        <!-- Content Slide 1 -->
+        <div class="slide">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
+                    <div id="progress-bar-3" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
+                        <div id="progress-fill-3" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
+                    </div>
+                    <span id="progress-percent-3" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
+                </div>
+            </div>
+            <h2>Why We Used the Waterfall Model</h2>
+            <div class="content-box" style="max-width:900px;padding-left:3.5rem;padding-right:3.5rem;">
+                <p>TThe Waterfall model is used for the Salon Commission and Sales Management System because it follows a step-by-step process. In this system, the requirements are already clear, like tracking sales, computing commissions, and generating reports. Since we already know what the system should do, it’s easier to follow the Waterfall model where we finish one phase before moving to the next. It helps avoid confusion and makes the development more organized. This methodology enabled us to:</p>
+            </div>
+        </div>
+        <!-- Content Slide 2 (new) -->
+        <div class="slide">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
+                    <div id="progress-bar-4" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
+                        <div id="progress-fill-4" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
+                    </div>
+                    <span id="progress-percent-4" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
+                </div>
+            </div>
+            <h2>Benefits of the Waterfall Model</h2>
+            <div class="content-box" style="max-width:900px;padding-left:3.5rem;padding-right:3.5rem;">
+                <ul>
+                    <li>Ensure thorough documentation and planning before development began</li>
+                    <li>Minimize changes and rework by clarifying requirements up front</li>
+                    <li>Track progress easily through distinct, well-defined phases</li>
+                </ul>
+                <p>By using the Waterfall model, we were able to maintain a disciplined workflow and meet our project objectives efficiently.</p>
+            </div>
+        </div>
+        
+        <!-- Content Slide 3 -->
+        <div class="slide">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
+                    <div id="progress-bar-5" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
+                        <div id="progress-fill-5" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
+                    </div>
+                    <span id="progress-percent-5" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
+                </div>
+            </div>
+            <h2>Key Features</h2>
+            <div class="grid-layout">
+                <div class="grid-item">
+                    <h3>Visual Appeal</h3>
+                    <p>Gradient backgrounds and floating elements create an engaging experience.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Animations</h3>
+                    <p>Smooth transitions between slides and floating animations for content.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Responsive</h3>
+                    <p>Adapts to different screen sizes while maintaining design integrity.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Easy Navigation</h3>
+                    <p>Simple controls to move between slides with visual indicators.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content Slide 4 -->
+        <div class="slide">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
+                    <div id="progress-bar-6" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
+                        <div id="progress-fill-6" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
+                    </div>
+                    <span id="progress-percent-6" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
+                </div>
+            </div>
+            <h2>Why Waterfall for This System?</h2>
+            <div class="content-box" style="max-width:900px;padding-left:3.5rem;padding-right:3.5rem;">
+                <p>The Waterfall model is used for the Salon Commission and Sales Management System because it follows a step-by-step process. In this system, the requirements are already clear, like tracking sales, computing commissions, and generating reports. Since we already know what the system should do, it’s easier to follow the Waterfall model where we finish one phase before moving to the next. It helps avoid confusion and makes the development more organized.</p>
+            </div>
+        </div>
+        
+        <!-- Closing Slide -->
+        <div class="slide title-slide">
+            <h1>Thank You!</h1>
+            <div class="content-box">
+                <p>We hope you enjoyed this presentation</p>
+                <p>Any questions?</p>
+            </div>
+            <div class="footer">Slide 7 of 7</div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button class="control-btn" id="prev-btn">←</button>
+            <button class="control-btn" id="next-btn">→</button>
+        </div>
+    </div>
+
+    <!-- Modal for topic description -->
+    <div id="topic-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.55);z-index:999;align-items:center;justify-content:center;">
+        <div id="topic-modal-content" class="modal-animate" style="background:white;max-width:700px;width:96vw;padding:3.5rem 2.5rem;border-radius:28px;box-shadow:0 12px 48px rgba(0,0,0,0.22);position:relative;text-align:center;min-height:260px;display:flex;flex-direction:column;justify-content:center;">
+            <button id="topic-modal-close" style="position:absolute;top:1.2rem;right:1.7rem;background:none;border:none;font-size:2.2rem;cursor:pointer;color:#e8498e;">&times;</button>
+            <h3 id="topic-modal-title" style="margin-bottom:1.5rem;color:#e8498e;font-size:2.2rem;"> </h3>
+            <p id="topic-modal-desc" style="color:#333;font-size:1.35rem;line-height:1.7;"> </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const pageIndicator = document.getElementById('page-indicator');
+            let currentSlide = 0;
+            let isTransitioning = false;
+            updatePageIndicator();
+            nextBtn.addEventListener('click', function() {
+                if (currentSlide < slides.length - 1 && !isTransitioning) {
+                    goToSlide(currentSlide + 1, 'next');
+                }
+            });
+            prevBtn.addEventListener('click', function() {
+                if (currentSlide > 0 && !isTransitioning) {
+                    goToSlide(currentSlide - 1, 'prev');
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if ((e.key === 'ArrowRight' || e.key === ' ') && !isTransitioning) {
+                    if (currentSlide < slides.length - 1) {
+                        goToSlide(currentSlide + 1, 'next');
+                    }
+                } else if (e.key === 'ArrowLeft' && !isTransitioning) {
+                    if (currentSlide > 0) {
+                        goToSlide(currentSlide - 1, 'prev');
+                    }
+                }
+            });
+            function goToSlide(n, direction = 'next') {
+                if (n === currentSlide) return;
+                isTransitioning = true;
+                const outgoing = slides[currentSlide];
+                const incoming = slides[n];
+                // Remove all transition classes
+                outgoing.classList.remove('active', 'out-next', 'out-prev', 'in-next', 'in-prev');
+                incoming.classList.remove('active', 'out-next', 'out-prev', 'in-next', 'in-prev');
+                // Set up incoming slide position
+                if (direction === 'next') {
+                    incoming.style.transform = 'translateX(100%)';
+                } else {
+                    incoming.style.transform = 'translateX(-100%)';
+                }
+                incoming.style.opacity = '1';
+                incoming.style.zIndex = '2';
+                // Force reflow to apply initial transform
+                void incoming.offsetWidth;
+                // Animate outgoing slide
+                if (direction === 'next') {
+                    outgoing.classList.add('out-next');
+                } else {
+                    outgoing.classList.add('out-prev');
+                }
+                // Animate incoming slide to active
+                incoming.classList.add('active');
+                incoming.style.transform = '';
+                setTimeout(() => {
+                    outgoing.classList.remove('out-next', 'out-prev');
+                    // Reset outgoing slide to be fully hidden and off-screen
+                    outgoing.classList.remove('active');
+                    outgoing.style.opacity = '0';
+                    outgoing.style.zIndex = '1';
+                    if (direction === 'next') {
+                        outgoing.style.transform = 'translateX(-100%)';
+                    } else {
+                        outgoing.style.transform = 'translateX(100%)';
+                    }
+                    currentSlide = n;
+                    updatePageIndicator();
+                    isTransitioning = false;
+                    updateActiveMenuItem(); // keep menu in sync
+                }, 800);
+            }
+            function updatePageIndicator() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+                // Also update the overview progress bar if present
+                // Update all progress bars in footers
+                for (let i = 2; i <= 6; i++) {
+                    const bar = document.getElementById('progress-fill-' + i);
+                    const percentLabel = document.getElementById('progress-percent-' + i);
+                    if (bar) {
+                        const percent = Math.round(((currentSlide + 1) / slides.length) * 100);
+                        bar.style.width = percent + '%';
+                        if (percentLabel) percentLabel.textContent = percent + '%';
+                    }
+                }
+            }
+
+            // Topic modal logic for Overview of Topics
+            const topicBoxes = document.querySelectorAll('.topic-box');
+            const modal = document.getElementById('topic-modal');
+            const modalTitle = document.getElementById('topic-modal-title');
+            const modalDesc = document.getElementById('topic-modal-desc');
+            const modalClose = document.getElementById('topic-modal-close');
+            const modalContent = document.getElementById('topic-modal-content');
+            topicBoxes.forEach(box => {
+                box.style.cursor = 'pointer';
+                box.addEventListener('click', function() {
+                    // Remove previous flex row if any
+                    const existingFlex = document.getElementById('modal-waterfall-flex');
+                    if (existingFlex) existingFlex.remove();
+                    // Clear previous image if any
+                    const existingImg = document.getElementById('modal-waterfall-img');
+                    if (existingImg) existingImg.remove();
+                    if (box.getAttribute('data-topic') === 'SDLC Waterfall Model') {
+                        modalDesc.style.display = 'none';
+                        modalTitle.textContent = box.getAttribute('data-topic');
+                        modalTitle.style.display = 'block';
+                        modalTitle.style.textAlign = 'center';
+                        // Only show the image below the title
+                        const img = document.createElement('img');
+                        img.src = 'waterfall-phases.png';
+                        img.alt = 'The 5 phases of Waterfall methodology';
+                        img.id = 'modal-waterfall-img';
+                        img.style.maxWidth = '100%';
+                        img.style.borderRadius = '18px';
+                        img.style.boxShadow = '0 4px 24px rgba(126,185,255,0.13)';
+                        img.style.margin = '1.2rem auto 1.5rem auto';
+                        img.style.display = 'block';
+                        modalTitle.parentNode.insertBefore(img, modalTitle.nextSibling);
+                    } else {
+                        modalDesc.style.display = '';
+                        modalTitle.style.display = '';
+                        modalTitle.style.textAlign = '';
+                        modalTitle.textContent = box.getAttribute('data-topic');
+                        modalDesc.textContent = box.getAttribute('data-description');
+                    }
+                    modal.style.display = 'flex';
+                    // Animate in
+                    modalContent.classList.remove('modal-hide');
+                    void modalContent.offsetWidth;
+                    modalContent.classList.add('modal-show');
+                });
+            });
+            function closeModal() {
+                // Animate out
+                modalContent.classList.remove('modal-show');
+                modalContent.classList.add('modal-hide');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 320);
+            }
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Side menu logic
+            const sideMenu = document.querySelector('.side-menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menuCollapse = document.querySelector('.menu-collapse');
+            const slideItems = document.querySelectorAll('.slide-item');
+            const sideMenuOverlay = document.querySelector('.side-menu-overlay');
+            function showSideMenuOverlay(show) {
+                sideMenuOverlay.style.display = show ? 'block' : 'none';
+                sideMenuOverlay.style.zIndex = show ? '999' : '';
+            }
+            menuToggle.addEventListener('click', function() {
+                sideMenu.classList.toggle('menu-open');
+                sideMenu.classList.remove('menu-collapsed');
+                showSideMenuOverlay(sideMenu.classList.contains('menu-open'));
+            });
+            menuCollapse.addEventListener('click', function() {
+                sideMenu.classList.add('menu-collapsed');
+                sideMenu.classList.remove('menu-open');
+                showSideMenuOverlay(false);
+            });
+            sideMenuOverlay.addEventListener('click', function() {
+                sideMenu.classList.add('menu-collapsed');
+                sideMenu.classList.remove('menu-open');
+                showSideMenuOverlay(false);
+            });
+            slideItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    goToSlide(slideIndex);
+                    // Update active state
+                    slideItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    // Auto-collapse menu on mobile
+                    if (window.innerWidth < 768) {
+                        sideMenu.classList.add('menu-collapsed');
+                        sideMenu.classList.remove('menu-open');
+                        showSideMenuOverlay(false);
+                    }
+                });
+            });
+            function updateActiveMenuItem() {
+                slideItems.forEach((item, index) => {
+                    item.classList.toggle('active', index === currentSlide);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
