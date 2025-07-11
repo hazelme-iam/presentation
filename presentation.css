@@ -232,16 +232,31 @@ li {
 }
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Changed from 2 to 3 columns for wider boxes */
     gap: 2rem;
     width: 100%;
+    max-width: 1000px; /* Slightly wider max width */
 }
 .grid-item {
     background: rgba(255, 255, 255, 0.7);
-    padding: 1.5rem;
+    padding: 2rem 2.2rem; /* Increased padding for more space */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    min-width: 0;
+}
+@media (max-width: 1100px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 700px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    .grid-item {
+        padding: 1.2rem 1rem;
+    }
 }
 .grid-item:hover {
     transform: translateY(-10px);

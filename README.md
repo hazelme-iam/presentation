@@ -34,4 +34,3 @@ The **Salon Commission and Sales Management System** is designed to:
 6. 🚀 **Deployment** – Final presentation  
 7. 🔄 **Maintenance** – Future improvements (proposed)
 
--
