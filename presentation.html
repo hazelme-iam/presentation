@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink & Blue Presentation</title>
     <link rel="stylesheet" href="presentation.css">
+    <style>
+      .improved-design {
+        width: 100%;
+        padding: 1.15rem 0;
+        margin-bottom: 0.85rem;
+        font-size: 1.13rem;
+        font-weight: 600;
+        border-radius: 13px;
+        border: none;
+        background: linear-gradient(90deg, #f7faff 60%, #e3e9f7 100%);
+        color: #2d3a4a;
+        box-shadow: 0 2px 12px rgba(126,185,255,0.10), 0 1.5px 8px rgba(255,126,185,0.08);
+        cursor: pointer;
+        transition: background 0.22s, color 0.22s, box-shadow 0.22s, transform 0.18s;
+        letter-spacing: 0.01em;
+        outline: none;
+        display: block;
+      }
+      .improved-design:last-child { margin-bottom: 0; }
+      .improved-design:hover, .improved-design:focus {
+        background: linear-gradient(90deg, #e3e9f7 60%, #f7faff 100%);
+        color: #498ee8;
+        box-shadow: 0 6px 24px rgba(126,185,255,0.13), 0 2px 8px rgba(255,126,185,0.10);
+        transform: translateY(-3px) scale(1.03);
+      }
+      .tech-box {
+        background: linear-gradient(120deg, #f7faff 70%, #e3e9f7 100%);
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(126,185,255,0.10), 0 1.5px 8px rgba(255,126,185,0.08);
+        border: 1.5px solid rgba(126,185,255,0.10);
+        margin-bottom: 0;
+      }
+      .tech-box h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.7rem;
+      }
+    </style>
 </head>
 <body>
     <div class="side-menu menu-collapsed">
@@ -16,17 +55,17 @@
         </div>
         <ul class="slide-list">
           <li class="slide-item active" data-slide="0">Title Slide</li>
-          <li class="slide-item" data-slide="1">Overview of Topics</li>
-          <li class="slide-item" data-slide="2">Waterfall Model</li>
-          <li class="slide-item" data-slide="3">Benefits of the Waterfall Model</li>
-          <li class="slide-item" data-slide="4">SDLC Phase 1: Requirement Analysis / Data Gathering</li>
-          <li class="slide-item" data-slide="5">SDLC Phase 2: System Designs</li>
-          <li class="slide-item" data-slide="6">SDLC Phase 3: Implementation – Tools & Technologies</li>
-          <li class="slide-item" data-slide="7">SDLC Phase 3: Implementation – Developed Modules</li>
-          <li class="slide-item" data-slide="8">SDLC Phase 4: Testing</li>
-          <li class="slide-item" data-slide="9">SDLC Phase 4: Testing – Details</li>
-          <li class="slide-item" data-slide="10">SDLC Phase 5: Deployment</li>
-          <li class="slide-item" data-slide="11">SDLC Phase 6: Maintenance</li>
+          <li class="slide-item" data-slide="1">Current Manual Process</li>
+          <li class="slide-item" data-slide="2">Overview of Topics</li>
+          <li class="slide-item" data-slide="3">Waterfall Model</li>
+          <li class="slide-item" data-slide="4">Benefits of the Waterfall Model</li>
+          <li class="slide-item" data-slide="5">SDLC Phase 1: Requirement Analysis / Data Gathering</li>
+          <li class="slide-item" data-slide="6">SDLC Phase 2: System Designs</li>
+          <li class="slide-item" data-slide="7">SDLC Phase 3: Implementation – Tools & Technologies</li>
+          <li class="slide-item" data-slide="8">SDLC Phase 3: Implementation – Developed Modules</li>
+          <li class="slide-item" data-slide="9">SDLC Phase 4: Testing</li>
+          <li class="slide-item" data-slide="10">SDLC Phase 4: Testing – Details</li>
+          <li class="slide-item" data-slide="11">SDLC Phase 5: Deployment</li>
           <li class="slide-item" data-slide="12">Thank You!</li>
         </ul>
       </div>
@@ -56,6 +95,23 @@
             <div class="footer">Created with HTML, CSS, and JavaScript</div>
         </div>
         
+        <!-- Manual Method Slide (new) -->
+        <div class="slide">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
+                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
+                    <div id="progress-bar-1" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
+                        <div id="progress-fill-1" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
+                    </div>
+                    <span id="progress-percent-1" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
+                </div>
+            </div>
+            <h2>Problem</h2>
+            <div class="content-box" style="max-width:900px;padding-left:3.5rem;padding-right:3.5rem;">
+                <p>Salon Commission and Sales Management System uses a manual method to record services and compute commissions. This process is time-consuming and prone to errors, which can affect employee trust and customer satisfaction.</p>
+            </div>
+        </div>
+        
         <!-- Overview of Topics Slide -->
         <div class="slide">
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
@@ -75,7 +131,7 @@
                 <button class="topic-btn topic-box" data-topic="Implementation" data-description="The actual development and coding of the system take place in this phase, following the design specifications.">Implementation</button>
                 <button class="topic-btn topic-box" data-topic="Testing" data-description="This phase involves verifying and validating the system to ensure it meets the specified requirements and is free of defects.">Testing</button>
                 <button class="topic-btn topic-box" data-topic="Deployment" data-description="The completed system is released to users and made operational in the production environment during this phase.">Deployment</button>
-                <button class="topic-btn topic-box" data-topic="Maintenance" data-description="Ongoing support, updates, and bug fixes are provided in this phase to ensure the system continues to function as intended.">Maintenance</button>
+                
             </div>
         </div>
         
@@ -172,32 +228,18 @@
             </div>
             <h2>SDLC Phase 2: System Designs</h2>
             <div class="modal-flex-row" style="margin-top:1.2rem;max-width:1000px;width:100%;align-items:flex-start;gap:2.2rem;">
-                <div style="flex:0 0 180px;display:flex;align-items:center;justify-content:center;">
-                    <!-- Placeholder SVG illustration for system design -->
-                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="18" y="28" width="84" height="64" rx="14" fill="#fff" stroke="#7eb9ff" stroke-width="3"/>
-                        <rect x="32" y="44" width="56" height="12" rx="4" fill="#ffb8d9"/>
-                        <rect x="32" y="62" width="56" height="8" rx="3" fill="#b8d9ff"/>
-                        <circle cx="60" cy="90" r="8" fill="#ff7eb9"/>
-                        <rect x="50" y="80" width="20" height="6" rx="2" fill="#7eb9ff"/>
-                    </svg>
-                </div>
                 <div style="flex:1 1 0%;min-width:0;">
                     <div class="grid-layout" style="margin-top:0;max-width:100%;width:100%;">
                         <div class="grid-item">
                             <h3 style="color:var(--pink-dark);">Database Design</h3>
-                            <ul style="font-size:1.1rem;margin-bottom:0.5rem;">
-                                <li>Entity Relationship Diagram (ERD)</li>
-                                <li>Normalization up to Third Normal Form (3NF)</li>
-                            </ul>
+                            <button class="design-btn improved-design" data-modal-img="erd.png">Entity Relationship Diagram</button>
+                            <button class="design-btn improved-design" data-modal-img="normalization.png">Normalization (3NF)</button>
                         </div>
                         <div class="grid-item">
                             <h3 style="color:var(--blue-dark);">Data Models</h3>
-                            <ul style="font-size:1.1rem;margin-bottom:0.5rem;">
-                                <li>Conceptual Model</li>
-                                <li>Logical Model</li>
-                                <li>Physical Model</li>
-                            </ul>
+                            <button class="design-btn improved-design" data-modal-img="erd.png">Conceptual Model</button>
+                            <button class="design-btn improved-design" data-modal-img="logical.png">Logical Model</button>
+                            <button class="design-btn improved-design" data-modal-img="physical.png">Physical Model</button>
                         </div>
                         <div class="grid-item">
                             <h3 style="color:var(--pink);">User Interface</h3>
@@ -205,6 +247,7 @@
                                 <li>Simple and user-friendly design</li>
                                 <li>Admin-focused layout</li>
                             </ul>
+                            <button class="design-btn improved-design" data-modal-img="ui.png">User Interface </button>
                         </div>
                     </div>
                 </div>
@@ -223,24 +266,21 @@
             </div>
             <h2>SDLC Phase 3: Implementation – Tools & Technologies</h2>
             <div class="modal-flex-row" style="margin-top:1.2rem;max-width:1000px;width:100%;align-items:flex-start;gap:2.2rem;">
-                <div style="flex:0 0 180px;display:flex;align-items:center;justify-content:center;">
-                    <!-- SVG illustration for tools/tech -->
-                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="20" y="30" width="80" height="60" rx="14" fill="#fff" stroke="#7eb9ff" stroke-width="3"/>
-                        <rect x="35" y="45" width="50" height="10" rx="4" fill="#ffb8d9"/>
-                        <rect x="35" y="60" width="50" height="8" rx="3" fill="#b8d9ff"/>
-                        <circle cx="60" cy="85" r="8" fill="#ff7eb9"/>
-                        <rect x="50" y="75" width="20" height="6" rx="2" fill="#7eb9ff"/>
-                    </svg>
+                <div class="content-box tech-box" style="flex:1 1 0%;padding:2.2rem 2.5rem;margin-left:0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem;">
+                    <h3 style="color:#498ee8;margin-bottom:0.5rem;">Frontend</h3>
+                    <div><b>Languages:</b> CSS, JavaScript</div>
+                    <div><b>Framework:</b> React.js<br><span style="font-size:0.98rem;color:#888;">A JavaScript framework used to build dynamic and responsive UI.</span></div>
+                    <div><b>Tool:</b> VS Code</div>
                 </div>
-                <div class="content-box" style="flex:1 1 0%;padding:2rem 2.5rem;margin-left:1.5rem;min-width:0;">
-                    <ul style="margin-bottom:0.7rem;font-size:1.18rem;line-height:2.1;list-style:none;padding-left:0;">
-                        <li style="margin-bottom:0.7rem;"><span style="background:linear-gradient(90deg,#ffb8d9,#b8d9ff);padding:0.4rem 1.1rem;border-radius:18px;font-weight:600;color:#e8498e;">PHP</span> – Backend development & commission computations</li>
-                        <li style="margin-bottom:0.7rem;"><span style="background:linear-gradient(90deg,#b8d9ff,#ffb8d9);padding:0.4rem 1.1rem;border-radius:18px;font-weight:600;color:#498ee8;">MySQL</span> – Database storage & sales records</li>
-                        <li style="margin-bottom:0.7rem;"><span style="background:linear-gradient(90deg,#ffb8d9,#b8d9ff);padding:0.4rem 1.1rem;border-radius:18px;font-weight:600;color:#e8498e;">React</span> – User interface</li>
-                        <li style="margin-bottom:0.7rem;"><span style="background:linear-gradient(90deg,#b8d9ff,#ffb8d9);padding:0.4rem 1.1rem;border-radius:18px;font-weight:600;color:#498ee8;">XAMPP</span> – Local server environment</li>
-                        <li><span style="background:linear-gradient(90deg,#ffb8d9,#b8d9ff);padding:0.4rem 1.1rem;border-radius:18px;font-weight:600;color:#e8498e;">VS Code</span> – Coding & system development</li>
-                    </ul>
+                <div class="content-box tech-box" style="flex:1 1 0%;padding:2.2rem 2.5rem;margin-left:0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem;">
+                    <h3 style="color:#e8498e;margin-bottom:0.5rem;">Backend</h3>
+                    <div><b>Database:</b> MySQL</div>
+                    <div><b>Server:</b> XAMPP</div>
+                    <div><b>Tool:</b> VS Code</div>
+                    <div><b>Language:</b> PHP<br><span style="font-size:0.98rem;color:#888;">A server-side scripting language that processes system logic.</span></div>
+                    
+                    <div><b>Framework:</b> CodeIgniter<br><span style="font-size:0.98rem;color:#888;">A lightweight PHP backend framework that follows the MVC structure.</span></div>
+                    
                 </div>
             </div>
         </div>
@@ -400,40 +440,6 @@
                 </div>
             </div>
         </div>
-        <!-- SDLC Phase 6: Maintenance -->
-        <div class="slide">
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:1.2rem;">
-                <span style="font-size:1.1rem;font-weight:600;color:var(--pink-dark);margin-bottom:0.3rem;">Progress</span>
-                <div style="display:flex;justify-content:center;align-items:center;gap:0.7rem;">
-                    <div id="progress-bar-12" style="width:180px;height:7px;background:rgba(126,185,255,0.18);border-radius:6px;overflow:hidden;">
-                        <div id="progress-fill-12" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--blue));transition:width 0.5s cubic-bezier(.65,0,.35,1);"></div>
-                    </div>
-                    <span id="progress-percent-12" style="font-size:0.98rem;color:var(--blue-dark);font-weight:600;width:38px;display:inline-block;text-align:right;">0%</span>
-                </div>
-            </div>
-            <h2>SDLC Phase 6: Maintenance</h2>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;margin-top:1.2rem;max-width:900px;width:100%;">
-                
-                <div class="content-box" style="width:100%;max-width:700px;padding:2rem 2.5rem;">
-                    <ul style="font-size:1.15rem;line-height:2;">
-                        <li><b>Timing:</b> Maintenance will happen after system deployment.</li>
-                        <li><b>Planned maintenance tasks:</b></li>
-                    </ul>
-                    <div style="display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:0.7rem;justify-content:center;">
-                        <div style="background:linear-gradient(135deg,#ffb8d9 60%,#fff 100%);box-shadow:0 2px 8px rgba(255,126,185,0.10);border-radius:14px;padding:1.2rem 1.5rem;min-width:180px;max-width:240px;flex:1 1 180px;display:flex;flex-direction:column;align-items:center;">
-                            <div style="font-size:1.5rem;margin-bottom:0.4rem;">🐞</div>
-                            <div style="font-weight:600;color:#e8498e;">Fixing bugs or system errors</div>
-                            <div style="font-size:0.98rem;text-align:center;">If found after deployment</div>
-                        </div>
-                        <div style="background:linear-gradient(135deg,#b8d9ff 60%,#fff 100%);box-shadow:0 2px 8px rgba(126,185,255,0.10);border-radius:14px;padding:1.2rem 1.5rem;min-width:180px;max-width:240px;flex:1 1 180px;display:flex;flex-direction:column;align-items:center;">
-                            <div style="font-size:1.5rem;margin-bottom:0.4rem;">🔄</div>
-                            <div style="font-weight:600;color:#498ee8;">System updates & improvements</div>
-                            <div style="font-size:0.98rem;text-align:center;">Based on user feedback</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- Ending Slide -->
         <div class="slide title-slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
@@ -474,6 +480,14 @@
             <button id="topic-modal-close" style="position:absolute;top:1.2rem;right:1.7rem;background:none;border:none;font-size:2.2rem;cursor:pointer;color:#e8498e;">&times;</button>
             <h3 id="topic-modal-title" style="margin-bottom:1.5rem;color:#e8498e;font-size:2.2rem;"> </h3>
             <p id="topic-modal-desc" style="color:#333;font-size:1.35rem;line-height:1.7;"> </p>
+        </div>
+    </div>
+
+    <!-- Modal for System Design Images -->
+    <div id="design-modal" class="modal-animate" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);z-index:2000;align-items:center;justify-content:center;">
+        <div style="background:#fff;border-radius:18px;box-shadow:0 8px 32px rgba(126,185,255,0.18);padding:2.5rem 2.5rem 2rem 2.5rem;max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;position:relative;">
+            <button id="close-design-modal" style="position:absolute;top:1.2rem;right:1.2rem;font-size:2rem;background:none;border:none;color:#e8498e;cursor:pointer;">&times;</button>
+            <img id="design-modal-img" src="" alt="System Design" style="max-width:70vw;max-height:65vh;border-radius:12px;box-shadow:0 2px 12px rgba(126,185,255,0.13);margin-bottom:1.2rem;" />
         </div>
     </div>
 
@@ -556,7 +570,7 @@
                 nextBtn.disabled = currentSlide === slides.length - 1;
                 // Also update the overview progress bar if present
                 // Update all progress bars in footers
-                for (let i = 2; i <= 12; i++) { // Updated to 12 for new slides
+                for (let i = 1; i <= 12; i++) { // Updated to 12 for new slides
                     const bar = document.getElementById('progress-fill-' + i);
                     const percentLabel = document.getElementById('progress-percent-' + i);
                     if (bar) {
@@ -673,6 +687,38 @@
                     item.classList.toggle('active', index === currentSlide);
                 });
             }
+
+            // Design modal logic
+            const designModal = document.getElementById('design-modal');
+            const designModalImg = document.getElementById('design-modal-img');
+            const closeDesignModal = document.getElementById('close-design-modal');
+
+            document.querySelectorAll('.design-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-modal-img');
+                    designModalImg.src = `images/${imgSrc}`; // Assuming images are in a 'images' subdirectory
+                    designModal.style.display = 'flex';
+                    // Animate in
+                    designModal.classList.remove('modal-hide');
+                    void designModal.offsetWidth;
+                    designModal.classList.add('modal-show');
+                });
+            });
+
+            closeDesignModal.addEventListener('click', function() {
+                // Animate out
+                designModal.classList.remove('modal-show');
+                designModal.classList.add('modal-hide');
+                setTimeout(() => {
+                    designModal.style.display = 'none';
+                }, 320);
+            });
+
+            designModal.addEventListener('click', function(e) {
+                if (e.target === designModal) {
+                    closeDesignModal.click(); // Close the modal
+                }
+            });
         });
 
         // Flip card logic for mobile/tap
